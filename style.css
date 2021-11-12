@@ -54,7 +54,7 @@ h1 span {
     font-weight: 600;
 }
 
-.content-container p {
+.content-txt {
     color: hsl(0, 36%, 70%);
     text-align: center;
     padding: 20px 20px 50px 20px;
@@ -73,12 +73,13 @@ h1 span {
     display: block;
     width: 90%;
     border: 1px solid hsl(0, 36%, 70%);
-    color:hsl(0, 36%, 70%);
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
     padding-left: 20px;
     height: 50px;
     border-radius: 9999px;
     outline: none;
     position: relative;
+    font-size: 18px;
 }
 
 .bloc-input input::placeholder {
@@ -101,7 +102,42 @@ h1 span {
     height: 50px;
     cursor: pointer;
     border: none;
+    outline: none;
+    -webkit-box-shadow: 10px 10px 22px -13px rgba(0,0,0,0.48);
+    -moz-box-shadow: 10px 10px 22px -13px rgba(0,0,0,0.48);
+    box-shadow: 10px 10px 22px -13px rgba(0,0,0,0.48);
+    transition: all 0.2s ease-in-out;
 }
+
+.bloc-input button:hover {
+    transform:scale(1.1);
+    -webkit-box-shadow: 10px 10px 38px -16px rgba(0,0,0,0.88);
+    -moz-box-shadow: 10px 10px 38px -16px rgba(0,0,0,0.88);
+    box-shadow: 10px 10px 38px -16px rgba(0,0,0,0.88);
+}
+
+.error-email {
+    margin-top: 10px;
+    margin-left: 40px;
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+
+.icon-error-email {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 10;
+    right: 80px;
+    top: 15px;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
 
 @media screen and (min-width: 620px) {
 
@@ -113,13 +149,17 @@ h1 span {
         font-size: 50px;
     }
 
-    .content-container p {
+    .content-txt {
         font-size: 20px;
     }
 
     .bloc-input button {
         width: 100px;
         height: 50px;
+    }
+
+    .icon-error-email {
+        right: 110px;
     }
 }
 
@@ -166,7 +206,7 @@ h1 span {
         font-size: 50px;
     }
 
-    .content-container p {
+    .content-txt {
         text-align: left;
         padding: 35px 0;
     }
@@ -188,5 +228,9 @@ h1 span {
         height: 50px;
         cursor: pointer;
         border: none;
+    }
+
+    .error-email {
+        margin-left: 20px;
     }
 }

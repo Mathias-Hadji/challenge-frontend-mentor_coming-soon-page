@@ -29,16 +29,18 @@
                 </span>
             </h1>
 
-            <p>Hello fellow shhoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our lauch deals.</p>
+            <p class="content-txt">Hello fellow shhoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our lauch deals.</p>
 
-            <div class="bloc-input">
+            <form class="bloc-input">
+                <img class="icon-error-email" src="./images/icon-error.svg">
                 <input type="email" placeholder="Email address">
-                <button><img src="./images/icon-arrow.svg" alt="fleche"></button>
-
-            </div>
-
+                <button type="submit"><img src="./images/icon-arrow.svg" alt="fleche"></button>
+            </form>
+            <p class="error-email">Please provide a valid email</p>
         </div>
 
     </div>
+
+    <script src="./app.js"></script>
 </body>
 </html>
